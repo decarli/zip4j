@@ -418,7 +418,7 @@ public class CipherOutputStream extends BaseOutputStream {
 						fileHeader.setCompressedSize(fileSize + saltLength
 								+ InternalZipConstants.AES_AUTH_LENGTH + 2); //2 is password verifier
 					} else {
-						fileHeader.setCompressedSize(0);
+						fileHeader.setCompressedSize(fileSize);
 					}
 				} else {
 					fileHeader.setCompressedSize(0);
